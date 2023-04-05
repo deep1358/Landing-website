@@ -1,0 +1,437 @@
+@import "variables";
+
+.register-login-back-icon {
+	cursor: pointer;
+	display: inline-flex;
+	margin: 0 0.5em;
+	border: 0.2px solid #ebedf0;
+	border-radius: 50%;
+	align-items: center;
+	justify-content: center;
+	padding: 0.5em;
+	cursor: pointer;
+	position: absolute;
+	top: 2%;
+	left: 2%;
+	transition: all 0.5s;
+	z-index: 10;
+
+	button {
+		background: transparent;
+		border: none;
+		outline: none;
+		cursor: pointer;
+		display: flex;
+		width: 20px;
+		height: 20px;
+		@media (max-width: 400px) {
+			height: 15px;
+			width: 15px;
+		}
+		img {
+			width: 20px;
+			@media (max-width: 400px) {
+				height: 15px;
+				width: 15px;
+			}
+		}
+	}
+	&:active {
+		transform: scale(0.8);
+	}
+}
+
+.login-register {
+	height: fit-content;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	overflow-x: hidden;
+
+	&-container {
+		position: relative;
+		display: flex;
+		align-items: center;
+		width: 450px;
+		height: 100%;
+		min-height: 100vh;
+		overflow: hidden;
+		justify-content: center;
+
+		@media (max-width: 650px) {
+			transform: translateY(7vh);
+		}
+		@media (max-width: 330px) {
+			transform: translateY(0);
+		}
+		@media (max-width: 580px) {
+			width: 100vw;
+		}
+
+		.container {
+			box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+			position: absolute;
+			min-height: fit-content;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-evenly;
+			overflow: hidden;
+
+			@media (max-height: 750px) {
+				justify-content: center;
+			}
+			@media (max-width: 650px) {
+				width: 95%;
+			}
+			&-header {
+				width: 90%;
+				display: flex;
+				align-items: center;
+				justify-content: flex-end;
+				padding: 0.5em;
+
+				p {
+					color: $text-light-color;
+					margin: 0 1em;
+					font-size: 0.8em;
+
+					@media (max-width: 330px) {
+						font-size: 0.7em;
+					}
+				}
+				@media (max-width: 370px) {
+					width: 100%;
+					justify-content: center;
+					padding: 0.5em 0;
+				}
+			}
+
+			&-title {
+				display: flex;
+				align-items: flex-start;
+				justify-content: center;
+				flex-direction: column;
+				padding: 0em 2em;
+				width: 100%;
+
+				h1 {
+					width: 100%;
+					font-size: 2em;
+
+					@media (max-width: 470px) {
+						font-size: 1.5em;
+					}
+					@media (max-width: 370px) {
+						font-size: 1.3em;
+					}
+				}
+				p {
+					color: $text-light-color;
+					font-size: 1em;
+
+					@media (max-width: 450px) {
+						font-size: 0.8em;
+					}
+					@media (max-width: 300px) {
+						font-size: 0.7em;
+					}
+				}
+				@media (max-width: 400px) {
+					padding: 0;
+					align-items: center;
+					text-align: center;
+				}
+			}
+
+			&-error,
+			&-success {
+				width: 80%;
+				margin: 0.5em auto 0;
+
+				@media (max-width: 400px) {
+					width: 90%;
+				}
+
+				p {
+					border-radius: 2.5px;
+					background-color: #ff6666;
+					padding: 4px;
+					font-size: 0.8em;
+					text-align: center;
+					color: white;
+					display: none;
+
+					@media (max-width: 330px) {
+						font-size: 0.6em;
+					}
+				}
+			}
+
+			&-success {
+				p {
+					background-color: #2ecc71;
+				}
+			}
+
+			form {
+				padding: 0 2em;
+				display: flex;
+				width: 100%;
+				justify-content: center;
+				flex-direction: column;
+				flex: 0.5;
+
+				@media (max-width: 400px) {
+					padding: 0 1em;
+				}
+				@media (max-width: 300px) {
+					padding: 0 0.5em;
+				}
+
+				img {
+					width: 20px;
+				}
+
+				.form-field {
+					display: flex;
+					justify-content: center;
+					flex-direction: column;
+
+					label {
+						font-size: 0.8em;
+						color: $text-light-color;
+						padding: 0.5em 0;
+
+						@media (max-width: 330px) {
+							font-size: 0.7em;
+						}
+					}
+
+					&-wrapper {
+						width: 100%;
+						position: relative;
+						border: 1px solid #c9c9c9;
+						border-radius: 2px;
+						display: flex;
+						align-items: center;
+						padding: 0 0.5em;
+						overflow: hidden;
+						transition: all 0.5s ease;
+
+						input {
+							padding: 0.8em;
+							outline: none;
+							margin: 0.5em 0;
+							border: none;
+							flex: 1;
+							font-size: 0.8em;
+
+							@media (max-width: 400px) {
+								padding: 0.4em;
+							}
+							@media (max-width: 330px) {
+								font-size: 0.7em;
+							}
+						}
+
+						&-eye {
+							opacity: 1 !important;
+							cursor: pointer;
+							margin-right: 0.5em;
+						}
+						img {
+							opacity: 0;
+						}
+
+						&::after {
+							content: "";
+							position: absolute;
+							bottom: 0;
+							left: 0;
+							width: 0;
+							height: 2px;
+							background-color: $primary-color;
+							transition: all 0.5s;
+						}
+
+						&:focus-within::after {
+							width: 100%;
+						}
+
+						&.correct::after {
+							width: 100%;
+							background-color: #2ecc71;
+						}
+						&.correct img {
+							opacity: 1;
+						}
+					}
+
+					&-forgot {
+						width: 100%;
+						display: flex;
+						align-items: center;
+						justify-content: space-between;
+						padding: 1em 0.3em;
+
+						@media (max-width: 340px) {
+							font-size: 0.8em;
+						}
+						&-remember {
+							position: relative;
+							display: flex;
+							align-items: center;
+							justify-content: center;
+
+							label {
+								color: $text-light-color;
+								margin: 0 0.5em;
+								font-size: 0.8em;
+							}
+						}
+						a {
+							font-size: 0.8em;
+							color: $primary-color;
+						}
+					}
+				}
+
+				button {
+					width: 100%;
+					margin: 1em auto 0;
+					margin-left: 0;
+					border-radius: 2px;
+				}
+			}
+
+			&-social {
+				padding: 1em 2em;
+				display: flex;
+				align-items: center;
+				justify-content: flex-start;
+				width: 100%;
+
+				@media (max-width: 650px) {
+					padding-top: 1em;
+				}
+				@media (max-width: 460px) {
+					flex-direction: column;
+				}
+
+				p {
+					color: $text-light-color;
+					margin: 0 1em;
+					font-size: 0.9em;
+					@media (max-width: 330px) {
+						font-size: 0.7em;
+					}
+				}
+
+				&-icons {
+					margin: 0 0.5em;
+					border: 0.2px solid #ebedf0;
+					border-radius: 50%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					padding: 0.5em;
+					cursor: pointer;
+
+					&-container {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						margin-top: 1rem;
+
+						@media (max-width: 330px) {
+							margin-top: 0.2em;
+						}
+					}
+
+					img {
+						width: 30px;
+						height: 30px;
+
+						@media (max-width: 330px) {
+							width: 20px;
+							height: 20px;
+						}
+					}
+				}
+			}
+		}
+
+		#forgot-password {
+			padding: 1rem;
+			position: relative;
+
+			.forgot-password-back-icon {
+				position: absolute;
+				top: 3%;
+				left: 3%;
+				button {
+					background: transparent;
+					border: none;
+					outline: none;
+					cursor: pointer;
+					padding: 0;
+
+					img {
+						width: 15px;
+						height: 15px;
+					}
+				}
+			}
+		}
+
+		#login {
+			transform: translateX(500px);
+			transition: all 0.5s;
+			animation: login 0.7s ease-in-out;
+
+			@keyframes login {
+				0% {
+					opacity: 0;
+					transform: translateY(5vh);
+				}
+				50% {
+					opacity: 1;
+					transform: translateY(-2vh);
+				}
+				100% {
+					opacity: 1;
+					transform: translateX(0);
+				}
+			}
+
+			@media (max-width: 650px) {
+				transform: translateX(110vw);
+			}
+		}
+		#register {
+			transform: translateX(-500px);
+			transition: all 0.5s;
+			@media (max-width: 650px) {
+				transform: translateX(-110vw);
+			}
+		}
+		#forgot-password {
+			transform: translateX(1000px);
+			transition: all 0.5s;
+
+			@media (max-width: 650px) {
+				transform: translateX(210vw);
+			}
+		}
+		#login.active {
+			transform: translateX(0);
+		}
+		#register.active {
+			transform: translateX(0);
+		}
+		#forgot-password.active {
+			transform: translateX(0);
+		}
+	}
+}

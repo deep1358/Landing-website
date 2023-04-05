@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Login | Signup</title>
+		<link rel="stylesheet" href="../scss/style.css" />
+	</head>
+	<body>
+		<!-- Navbar -->
+		<nav class="navbar">
+			<!-- Navbar Hamburger icon -->
+			<div class="navbar-icon">
+				<input type="checkbox" id="navbar-check" class="checkbox" hidden />
+				<div class="hamburger-menu">
+					<label for="navbar-check" class="menu">
+						<div class="menu-line menu-line-1"></div>
+						<div class="menu-line menu-line-2"></div>
+						<div class="menu-line menu-line-3"></div>
+					</label>
+				</div>
+			</div>
+
+			<!-- Navbar Body -->
+			<div class="navbar-body">
+				<a href="home.html" data-text="Home">Home</a>
+				<a href="about.html" data-text="About Us">About Us</a>
+				<a href="portfolio.html" data-text="Portfolios">Portfolios</a>
+				<a href="blog.html" data-text="Blogs">Blogs</a>
+				<a href="login.html" data-text="Login">Login</a>
+			</div>
+		</nav>
+		<!-- Back Icon -->
+		<div class="register-login-back-icon">
+			<button>
+				<img src="../images/left-arrow.png" alt="left-arrow" />
+			</button>
+		</div>
+
+		<!-- Login/Register -->
+		<div class="login-register">
+			<!-- Login/Register Container -->
+			<div class="login-register-container">
+				<!-- Register -->
+				<div class="container" id="register">
+					<!-- Header of Register -->
+					<div class="container-header">
+						<p>Already have an account?</p>
+						<button class="btn btn-secondary">LOGIN</button>
+					</div>
+
+					<!-- Title of Register -->
+					<div class="container-title">
+						<h1>Welcome to Company!</h1>
+						<p>Register your account</p>
+					</div>
+
+					<!-- success container of Register -->
+					<div class="container-success">
+						<p></p>
+					</div>
+
+					<!-- Error container of Register -->
+					<div class="container-error">
+						<p></p>
+					</div>
+
+					<!-- Form of Register -->
+					<form id="register-form">
+						<div class="form-field">
+							<label for="register-name">FullName</label>
+							<div class="form-field-wrapper" id="register-name-cont">
+								<input
+									type="text"
+									id="register-name"
+									placeholder="John williams"
+									required
+								/>
+								<img
+									src="../images/check-circle.png"
+									id="register-name-check"
+									alt="check-circle"
+								/>
+							</div>
+						</div>
+						<div class="form-field">
+							<label for="register-email">Email</label>
+							<div class="form-field-wrapper" id="register-email-cont">
+								<input
+									type="email"
+									id="register-email"
+									placeholder="john123@gmail.com"
+									required
+								/>
+								<img
+									src="../images/check-circle.png"
+									alt="check-circle"
+								/>
+							</div>
+						</div>
+						<div class="form-field">
+							<label for="register-password">Password</label>
+							<div
+								class="form-field-wrapper"
+								id="register-password-cont"
+							>
+								<input
+									type="password"
+									id="register-password"
+									required
+									placeholder="8+ character"
+								/>
+								<img
+									class="form-field-wrapper-eye eye-1"
+									src="../images/eye-close.png"
+									alt="eye-close"
+								/><img
+									src="../images/check-circle.png"
+									alt="check-circle"
+								/>
+							</div>
+						</div>
+						<div class="form-field">
+							<label for="register-confirm-password"
+								>Confirm Password</label
+							>
+							<div
+								class="form-field-wrapper"
+								id="register-confirm-password-cont"
+							>
+								<input
+									type="password"
+									id="register-confirm-password"
+									required
+									placeholder="Re enter password"
+								/>
+								<img
+									class="form-field-wrapper-eye eye-2"
+									src="../images/eye-close.png"
+									alt="eye-close"
+								/><img
+									src="../images/check-circle.png"
+									alt="check-circle"
+								/>
+							</div>
+						</div>
+						<button class="btn btn-primary">Register</button>
+					</form>
+
+					<!-- Other social media authentication icons -->
+					<div class="container-social">
+						<p>Create account with</p>
+						<div class="container-social-icons-container">
+							<div class="container-social-icons">
+								<img
+									src="../images//facebook-logo.png"
+									alt="facebook-logo"
+								/>
+							</div>
+							<div class="container-social-icons">
+								<img
+									src="../images//google-logo.png"
+									alt="google-logo"
+								/>
+							</div>
+							<div class="container-social-icons">
+								<img
+									src="../images/linkedin-logo.png"
+									alt="linkedin-logo"
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Login -->
+				<div class="container active" id="login">
+					<!-- Header of Login -->
+					<div class="container-header">
+						<p>Don't have an account?</p>
+						<button class="btn btn-secondary">REGISTER</button>
+					</div>
+
+					<!-- Title of Login -->
+					<div class="container-title">
+						<h1>Welcome to Company!</h1>
+						<p>Login your account</p>
+					</div>
+
+					<!-- success container of Register -->
+					<div class="container-success">
+						<p></p>
+					</div>
+
+					<!-- Error container of Login -->
+					<div class="container-error">
+						<p></p>
+					</div>
+
+					<!-- Form of Login -->
+					<form id="login-form">
+						<div class="form-field">
+							<label for="login-email">Email</label>
+							<div class="form-field-wrapper" id="login-email-cont">
+								<input
+									type="email"
+									id="login-email"
+									placeholder="john123@gmail.com"
+									required
+								/>
+								<img
+									src="../images/check-circle.png"
+									alt="check-circle"
+								/>
+							</div>
+						</div>
+						<div class="form-field">
+							<label for="login-password">Password</label>
+							<div class="form-field-wrapper" id="login-password-cont">
+								<input
+									type="password"
+									id="login-password"
+									required
+									placeholder="8+ character"
+								/>
+								<img
+									class="form-field-wrapper-eye eye-3"
+									src="../images/eye-close.png"
+									alt="eye-close"
+								/>
+								<img
+									src="../images/check-circle.png"
+									alt="check-circle"
+								/>
+							</div>
+						</div>
+						<div class="form-field-forgot">
+							<div class="form-field-forgot-remember">
+								<input type="checkbox" id="remember" />
+								<label for="remember">Remember me</label>
+							</div>
+							<a href="#">Forgot password?</a>
+						</div>
+						<button class="btn btn-primary">Login</button>
+					</form>
+
+					<!-- Other social media authentication icons -->
+					<div class="container-social">
+						<p>Login with</p>
+						<div class="container-social-icons-container">
+							<div class="container-social-icons">
+								<img
+									src="../images//facebook-logo.png"
+									alt="facebook-logo"
+								/>
+							</div>
+							<div class="container-social-icons">
+								<img
+									src="../images//google-logo.png"
+									alt="google-logo"
+								/>
+							</div>
+							<div class="container-social-icons">
+								<img
+									src="../images/linkedin-logo.png"
+									alt="linkedin-logo"
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Forgot Password -->
+				<div class="container" id="forgot-password">
+					<!-- Forgot-password back icon -->
+					<div class="forgot-password-back-icon">
+						<button class="btn btn-secondary">
+							<img src="../images/left-arrow.png" alt="left-arrow" />
+						</button>
+					</div>
+
+					<!-- Title of Forgot-password -->
+					<div class="container-title">
+						<h1>Change Password</h1>
+					</div>
+
+					<!-- success container of Register -->
+					<div class="container-success">
+						<p></p>
+					</div>
+
+					<!-- Error container of Forgot-password -->
+					<div class="container-error">
+						<p></p>
+					</div>
+
+					<!-- Form of forgot-password -->
+					<form id="forgot-password-form">
+						<div class="form-field">
+							<label for="forgot-password-email">Email</label>
+							<div
+								class="form-field-wrapper"
+								id="forgot-password-email-cont"
+							>
+								<input
+									type="email"
+									id="forgot-password-email"
+									placeholder="john123@gmail.com"
+									required
+								/>
+								<img
+									src="../images/check-circle.png"
+									alt="check-circle"
+								/>
+							</div>
+						</div>
+						<div class="form-field">
+							<label for="forgot-password-password">New Password</label>
+							<div
+								class="form-field-wrapper"
+								id="forgot-password-password-cont"
+							>
+								<input
+									type="password"
+									id="forgot-password-password"
+									required
+									placeholder="8+ character"
+								/>
+								<img
+									class="form-field-wrapper-eye eye-4"
+									src="../images/eye-close.png"
+									alt="eye-close"
+								/><img
+									src="../images/check-circle.png"
+									alt="check-circle"
+								/>
+							</div>
+						</div>
+						<div class="form-field">
+							<label for="forgot-password-confirm-password"
+								>Confirm New Password</label
+							>
+							<div
+								class="form-field-wrapper"
+								id="forgot-password-confirm-password-cont"
+							>
+								<input
+									type="password"
+									id="forgot-password-confirm-password"
+									required
+									placeholder="Re enter password"
+								/>
+								<img
+									class="form-field-wrapper-eye eye-5"
+									src="../images/eye-close.png"
+									alt="eye-close"
+								/><img
+									src="../images/check-circle.png"
+									alt="check-circle"
+								/>
+							</div>
+						</div>
+						<button class="btn btn-primary">Change</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<script src="../js/login.js"></script>
+		<script src="../js/navbar.js"></script>
+	</body>
+</html>
